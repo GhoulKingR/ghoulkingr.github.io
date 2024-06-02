@@ -2,33 +2,34 @@ import styled from 'styled-components';
 import PatternRings from '../assets/images/pattern-rings.svg';
 
 function Experience() {
+    const since2020 = new Date().getFullYear() - 2020;
     return (
         <Section>
             <Rings src={PatternRings} alt='rings pattern' />
             <Container>
                 <div>
-                    <h2>HTML</h2>
-                    <p>4 Years Experience</p>
+                    <h2>Web Development</h2>
+                    <p>{since2020} Years Experience</p>
                 </div>
                 <div>
-                    <h2>CSS</h2>
-                    <p>4 Years Experience</p>
+                    <h2>API Development</h2>
+                    <p>{since2020} Years Experience</p>
                 </div>
                 <div>
-                    <h2>Javascript</h2>
-                    <p>4 Years Experience</p>
+                    <h2>Documentation Engineering</h2>
+                    <p>{since2020 - 1} Years Experience</p>
                 </div>
                 <div>
-                    <h2>Accessibility</h2>
-                    <p>4 Years Experience</p>
+                    <h2>Content Creation</h2>
+                    <p>{since2020 - 1} Years Experience</p>
                 </div>
                 <div>
-                    <h2>React</h2>
-                    <p>3 Years Experience</p>
+                    <h2>AI & ML</h2>
+                    <p>{since2020 - 2} Years Experience</p>
                 </div>
                 <div>
-                    <h2>Sass</h2>
-                    <p>3 Years Experience</p>
+                    <h2>CI/CD</h2>
+                    <p>{since2020} Years Experience</p>
                 </div>
             </Container>
         </Section>
