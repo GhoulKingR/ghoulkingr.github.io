@@ -1,7 +1,7 @@
 import styled from 'styled-components';
-import ImageProfileMobile from '../assets/images/image-profile-mobile.webp';
-import ImageProfileTablet from '../assets/images/image-profile-tablet.webp';
-import ImageProfileDesktop from '../assets/images/image-profile-desktop.webp';
+import ImageProfileMobile from '../assets/images/image-profile-mobile.png';
+import ImageProfileTablet from '../assets/images/image-profile-tablet.png';
+import ImageProfileDesktop from '../assets/images/image-profile-desktop.png';
 import PatternRings from '../assets/images/pattern-rings.svg';
 import PatternCircle from '../assets/images/pattern-circle.svg';
 
@@ -11,11 +11,14 @@ function Greeting() {
             <IntroTexts>
                 <Container>
                     <GreetingText>
-                        Nice to meet you! I'm <Underline>Adam Keyes</Underline>.
+                        Nice to meet you! I'm{' '}
+                        <Underline>Chigozie Oduah</Underline>.
                     </GreetingText>
                     <Description>
-                        Based in the UK, I'm a front-end developer passionate
-                        about building accessible web apps that users love.
+                        Based in Nigeria, I'm a software engineer and technical
+                        writer passionate about building high quality software
+                        that users love and writing technical contents to
+                        explain complex concepts clearly.
                     </Description>
                     <Contact>
                         <a href='#contact-me'>CONTACT ME</a>
