@@ -115,11 +115,10 @@ const Desktop = styled.div`
 
     .image {
         position: relative;
-        width: fit-content;
-        height: fit-content;
 
         & > img {
-            width: 100%;
+            width: 431px;
+            height: auto;
         }
 
         & > div {
@@ -180,6 +179,7 @@ const Desktop = styled.div`
     ul {
         list-style: none;
         margin-bottom: 20px;
+        max-width: 431px;
 
         li {
             display: inline;

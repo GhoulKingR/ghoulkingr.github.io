@@ -12,7 +12,7 @@ function Greeting() {
                 <Container>
                     <GreetingText>
                         Nice to meet you! I'm{' '}
-                        <Underline>Chigozie Oduah</Underline>.
+                        <span className='text-[#4ee1a0]'>Chigozie Oduah</span>.
                     </GreetingText>
                     <Description>
                         Based in Nigeria, I'm a software engineer and technical
@@ -30,7 +30,11 @@ function Greeting() {
             <Images>
                 <DesktopImage src={ImageProfileDesktop} alt='profile desktop' />
                 <TabletImage src={ImageProfileTablet} alt='profile tablet' />
-                <MobileImage src={ImageProfileMobile} alt='profile mobile' />
+                <MobileImage
+                    src={ImageProfileMobile}
+                    alt='profile mobile'
+                    className='mx-auto'
+                />
             </Images>
         </Section>
     );

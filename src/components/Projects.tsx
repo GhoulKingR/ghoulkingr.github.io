@@ -1,11 +1,10 @@
 import styled from 'styled-components';
-import Project1 from '../assets/images/thumbnail-project-1-small.webp';
+import Project1 from '../assets/images/connect-four.png';
 import Project2 from '../assets/images/thumbnail-project-2-small.webp';
 import Project3 from '../assets/images/thumbnail-project-3-small.webp';
 import Project4 from '../assets/images/thumbnail-project-4-small.webp';
 import Project5 from '../assets/images/thumbnail-project-5-small.webp';
 import Project6 from '../assets/images/thumbnail-project-6-small.webp';
-import ProjectElement from './Project';
 
 interface Project {
     imageSrc: string;
@@ -18,11 +17,17 @@ interface Project {
 function Projects() {
     const projectDescriptions: Project[] = [
         {
-            githubLink: '/',
+            githubLink: 'https://github.com/GhoulKingR/connect-four',
             imageSrc: Project1,
-            tools: ['HTML', 'CSS'],
-            projectLink: '/',
-            title: 'DESIGN PORTFOLIO',
+            tools: [
+                'TYPESCRIPT',
+                'JEST',
+                'NEXT.JS',
+                'TAILWIND',
+                'STYLED COMPONENTS',
+            ],
+            projectLink: 'https://ghoulkingr.github.io/connect-four/',
+            title: 'CONNECT FOUR',
         },
         {
             githubLink: '/',
@@ -62,107 +67,86 @@ function Projects() {
     ];
 
     return (
-        <Section>
-            <Header>
-                <h1>Projects</h1>
-                <a href='#contact-me'>CONTACT ME</a>
-            </Header>
-            <ProjectGrid>
-                {projectDescriptions.map((v, i) => (
-                    <ProjectElement key={i} projectDetails={v} />
-                ))}
-            </ProjectGrid>
+        <Section className='md:mx-[30px]'>
+            <div className='w-full flex justify-between mb-[40px] items-center'>
+                <h1 className='font-bold text-[40px] leading-[40px] tracking-[-1.14px] md:text-[72px] md:leading-[72px] md:tracking-[-2.05px]'>
+                    Projects
+                </h1>
+                <a
+                    href='#contact-me'
+                    className='font-bold text-[16px] leading-[26px] tracking-[2.29px] my-underline hover:text-[#4ee1a0]'>
+                    CONTACT ME
+                </a>
+            </div>
+
+            <div className='mb-[80px] md:grid grid-cols-2 gap-x-6 gap-y-5'>
+                {projectDescriptions.map((project, i) => {
+                    return (
+                        <div key={i} className='mb-[40px]'>
+                            <div className='relative'>
+                                <img
+                                    src={project.imageSrc}
+                                    alt='sample look'
+                                    className='mb-[20px]'
+                                />
+                                <div className='font-bold hidden xl:flex text-center absolute opacity-0 hover:opacity-100 cursor-pointer bg-black/50 top-0 left-0 w-full h-full justify-center items-center'>
+                                    <div>
+                                        <a
+                                            href={project.projectLink}
+                                            className='my-underline mb-[48px] hover:text-[#4ee1a0]'>
+                                            VIEW PROJECT
+                                        </a>
+                                        <br />
+                                        <a
+                                            href={project.githubLink}
+                                            className='my-underline hover:text-[#4ee1a0]'>
+                                            VIEW CODE
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                            <div className='font-bold text-[24px] leading-[32px] mb-[7px]'>
+                                {project.title}
+                            </div>
+                            <div className='mb-[20px]'>
+                                {project.tools.map((tool, i) => {
+                                    return (
+                                        <div
+                                            key={i}
+                                            className='inline-block mr-[18px] text-[18px] leading-[28px]'>
+                                            {tool}
+                                        </div>
+                                    );
+                                })}
+                            </div>
+                            <div className='flex text-[16px] leading-[26px] tracking-[2.29px] font-bold xl:hidden'>
+                                <a
+                                    href={project.projectLink}
+                                    className='mr-[30px] my-underline hover:text-[#4ee1a0]'>
+                                    VIEW PROJECT
+                                </a>
+                                <a
+                                    href={project.githubLink}
+                                    className='my-underline hover:text-[#4ee1a0]'>
+                                    VIEW CODE
+                                </a>
+                            </div>
+                        </div>
+                    );
+                })}
+            </div>
         </Section>
     );
 }
 
 export default Projects;
 
-const ProjectGrid = styled.div`
-    display: grid;
-
-    @media (min-width: 768px) {
-        grid-template-columns: auto auto;
-        column-gap: 24px;
-        margin-left: 14px;
-        margin-right: 14px;
-    }
-
-    @media (min-width: 768px) {
-        column-gap: 30px;
-    }
-`;
-
 const Section = styled.section`
     margin-top: 80px;
     max-width: 1110px;
 
-    @media (min-width: 768px) {
-        padding-left: 16px;
-        padding-right: 16px;
-    }
-
     @media (min-width: 1110px) {
         margin-left: auto;
         margin-right: auto;
-    }
-`;
-
-const Header = styled.div`
-    display: flex;
-    justify-content: space-between;
-    margin-bottom: 40px;
-    align-items: center;
-
-    h1 {
-        font-weight: bold;
-        font-size: 40px;
-        line-height: 40px;
-        letter-spacing: -1.14px;
-    }
-
-    a {
-        display: inline-flex;
-        flex-direction: column;
-        font-size: 16px;
-        font-weight: bold;
-        line-height: 26px;
-        letter-spacing: 2.29px;
-        color: white;
-        text-decoration: none;
-
-        &:hover {
-            color: #4ee1a0;
-        }
-
-        &::after {
-            content: ' ';
-            margin-top: 10px;
-            width: 100%;
-            height: 2px;
-            background-color: #4ee1a0;
-        }
-    }
-
-    @media (min-width: 768px) {
-        margin-bottom: 60px;
-        margin-left: 16px;
-        margin-right: 16px;
-
-        h1 {
-            font-size: 72px;
-            line-height: 72px;
-            letter-spacing: -2.05px;
-        }
-    }
-
-    @media (min-width: 1110px) {
-        margin-bottom: 80px;
-
-        h1 {
-            font-size: 88px;
-            line-height: 88px;
-            letter-spacing: -2.5px;
-        }
     }
 `;
