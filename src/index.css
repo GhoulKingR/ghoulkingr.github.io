@@ -1,15 +1,16 @@
-body, html {
-  background-color: #151515;
-  color: white;
+body,
+html {
+    background-color: #151515;
+    color: white;
 }
 
 * {
-  padding: 0;
-  margin: 0;
-  font-family: SpaceGrotesk;
+    padding: 0;
+    margin: 0;
+    font-family: SpaceGrotesk;
 }
 
 @font-face {
-  font-family: SpaceGrotesk;
-  src: url(/assets/fonts/SpaceGrotesk-VariableFont_wght.ttf);
+    font-family: SpaceGrotesk;
+    src: url(/assets/fonts/SpaceGrotesk-VariableFont_wght.ttf);
 }
