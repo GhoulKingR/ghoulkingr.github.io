@@ -1,3 +1,3 @@
-# My Portfolio website
+# My Portfolio
 
 https://ghoulkingr.github.io
