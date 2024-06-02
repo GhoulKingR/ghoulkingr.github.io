@@ -184,18 +184,6 @@ const GreetingText = styled.h1`
     }
 `;
 
-const Underline = styled.span`
-    display: inline-flex;
-    flex-direction: column;
-
-    &::after {
-        content: ' ';
-        width: 100%;
-        height: 4px;
-        background-color: #4ee1a0;
-    }
-`;
-
 const Contact = styled.div`
     text-align: center;
 

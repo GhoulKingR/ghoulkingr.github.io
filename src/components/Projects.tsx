@@ -1,10 +1,6 @@
 import styled from 'styled-components';
 import Project1 from '../assets/images/connect-four.png';
-import Project2 from '../assets/images/thumbnail-project-2-small.webp';
-import Project3 from '../assets/images/thumbnail-project-3-small.webp';
-import Project4 from '../assets/images/thumbnail-project-4-small.webp';
-import Project5 from '../assets/images/thumbnail-project-5-small.webp';
-import Project6 from '../assets/images/thumbnail-project-6-small.webp';
+import Project2 from '../assets/images/hangman-game.png';
 
 interface Project {
     imageSrc: string;
@@ -30,39 +26,18 @@ function Projects() {
             title: 'CONNECT FOUR',
         },
         {
-            githubLink: '/',
+            githubLink: 'https://github.com/GhoulKingR/hangman-game',
             imageSrc: Project2,
-            tools: ['HTML', 'CSS'],
-            projectLink: '/',
-            title: 'E-LEARNING LANDING PAGE',
-        },
-        {
-            githubLink: '/',
-            imageSrc: Project3,
-            tools: ['HTML', 'CSS', 'JAVASCRIPT'],
-            projectLink: '/',
-            title: 'TODO WEB APP',
-        },
-        {
-            githubLink: '/',
-            imageSrc: Project4,
-            tools: ['HTML', 'CSS', 'JAVASCRIPT'],
-            projectLink: '/',
-            title: 'ENTERTAINMENT WEB APP',
-        },
-        {
-            githubLink: '/',
-            imageSrc: Project5,
-            tools: ['HTML', 'CSS', 'JAVASCRIPT'],
-            projectLink: '/',
-            title: 'MEMORY GAME',
-        },
-        {
-            githubLink: '/',
-            imageSrc: Project6,
-            tools: ['HTML', 'CSS', 'JAVASCRIPT'],
-            projectLink: '/',
-            title: 'ART GALLERY SHOWCASE',
+            tools: [
+                'TYPESCRIPT',
+                'BOOTSTRAP',
+                'NEXT.JS',
+                'TAILWIND',
+                'STYLED COMPONENTS',
+            ],
+            projectLink:
+                'https://github.com/GhoulKingR/hangman-game/settings/pages',
+            title: 'HANGMAN GAME',
         },
     ];
 
