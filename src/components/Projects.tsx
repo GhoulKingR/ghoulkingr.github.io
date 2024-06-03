@@ -68,12 +68,14 @@ function Projects() {
                                     <div>
                                         <a
                                             href={project.projectLink}
+                                            target='_blank'
                                             className='my-underline mb-[48px] hover:text-[#4ee1a0]'>
                                             VIEW PROJECT
                                         </a>
                                         <br />
                                         <a
                                             href={project.githubLink}
+                                            target='_blank'
                                             className='my-underline hover:text-[#4ee1a0]'>
                                             VIEW CODE
                                         </a>
@@ -97,11 +99,13 @@ function Projects() {
                             <div className='flex text-[16px] leading-[26px] tracking-[2.29px] font-bold xl:hidden'>
                                 <a
                                     href={project.projectLink}
+                                    target='_blank'
                                     className='mr-[30px] my-underline hover:text-[#4ee1a0]'>
                                     VIEW PROJECT
                                 </a>
                                 <a
                                     href={project.githubLink}
+                                    target='_blank'
                                     className='my-underline hover:text-[#4ee1a0]'>
                                     VIEW CODE
                                 </a>
