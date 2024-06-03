@@ -1,8 +1,13 @@
 import styled from 'styled-components';
 import NameLinks from './NameLinks';
 import PatternRings from '../assets/images/pattern-rings.svg';
+import { useRef } from 'react';
 
 function ContactMe() {
+    const name = useRef<HTMLInputElement | null>(null);
+    const email = useRef<HTMLInputElement | null>(null);
+    const message = useRef<HTMLTextAreaElement | null>(null);
+
     return (
         <Section id='contact-me'>
             <FormSection>
@@ -16,11 +21,29 @@ function ContactMe() {
                     </p>
                 </div>
                 <div className='form'>
-                    <form>
-                        <input type='text' placeholder='NAME' />
-                        <input type='email' placeholder='EMAIL' />
-                        <div>Sorry, invalid format here</div>
-                        <textarea placeholder='MESSAGE'></textarea>
+                    <form
+                        onSubmit={(e) => {
+                            e.preventDefault();
+                            if (
+                                email.current !== null &&
+                                name.current !== null &&
+                                message.current !== null
+                            )
+                                window.open(
+                                    `mailto:oduahchigozie46@gmail.com?cc=${email.current.value}&subject=Portfolio email form&body=${message.current.value}%0A%0A${name.current.value}`,
+                                );
+                        }}>
+                        <input type='text' placeholder='NAME' ref={name} />
+                        <input
+                            type='email'
+                            placeholder='EMAIL'
+                            name='cc'
+                            ref={email}
+                        />
+                        <div>Sorry, invalid format</div>
+                        <textarea
+                            placeholder='MESSAGE'
+                            ref={message}></textarea>
                         <button type='submit'>SEND MESSAGE</button>
                     </form>
                 </div>
