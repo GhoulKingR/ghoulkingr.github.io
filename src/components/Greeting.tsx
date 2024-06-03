@@ -16,9 +16,9 @@ function Greeting() {
                     </GreetingText>
                     <Description>
                         Based in Nigeria, I'm a software engineer and technical
-                        writer passionate about building high quality software
-                        that users love and writing technical contents to
-                        explain complex concepts clearly.
+                        writer passionate about building high-quality software
+                        that users love and writing technical content to explain
+                        complex concepts clearly.
                     </Description>
                     <Contact>
                         <a href='#contact-me'>CONTACT ME</a>
