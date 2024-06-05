@@ -1,10 +1,22 @@
 import styled from 'styled-components';
+import ArticlesIcon from '../assets/images/blog-website-svgrepo-com.svg';
 
 export default function NameLinks() {
     return (
         <Navigation>
             <Name>GhoulKingR</Name>
             <Links>
+                <li>
+                    <a
+                        href='https://ghoulkingr.github.io/articles/'
+                        target='_blank'>
+                        <img
+                            src={ArticlesIcon}
+                            alt='Articles'
+                            className='w-[25px] h-[24px]'
+                        />
+                    </a>
+                </li>
                 <li>
                     <a href='https://github.com/GhoulKingR' target='_blank'>
                         <svg
