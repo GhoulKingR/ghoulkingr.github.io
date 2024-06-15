@@ -2,34 +2,27 @@ import styled from 'styled-components';
 import PatternRings from '../assets/images/pattern-rings.svg';
 
 function Experience() {
-    const since2020 = new Date().getFullYear() - 2020;
     return (
         <Section>
             <Rings src={PatternRings} alt='rings pattern' />
             <Container>
                 <div>
+                    <h2>Artificial Intellligence</h2>
+                </div>
+                <div>
+                    <h2>Machine Learning</h2>
+                </div>
+                <div>
+                    <h2>Deep Learning</h2>
+                </div>
+                <div>
                     <h2>Web Development</h2>
-                    <p>{since2020} Years Experience</p>
                 </div>
                 <div>
                     <h2>API Development</h2>
-                    <p>{since2020} Years Experience</p>
-                </div>
-                <div>
-                    <h2>Documentation Engineering</h2>
-                    <p>{since2020 - 1} Years Experience</p>
                 </div>
                 <div>
                     <h2>Content Creation</h2>
-                    <p>{since2020 - 1} Years Experience</p>
-                </div>
-                <div>
-                    <h2>AI & ML</h2>
-                    <p>{since2020 - 2} Years Experience</p>
-                </div>
-                <div>
-                    <h2>CI/CD</h2>
-                    <p>{since2020} Years Experience</p>
                 </div>
             </Container>
         </Section>
@@ -82,14 +75,6 @@ const Container = styled.div`
             line-height: 40px;
             letter-spacing: -1px;
         }
-
-        p {
-            color: #d9d9d9;
-            font-size: 16px;
-            font-weight: medium;
-            letter-spacing: 0px;
-            line-height: 26px;
-        }
     }
 
     @media (min-width: 768px) {
@@ -105,11 +90,6 @@ const Container = styled.div`
                 line-height: 56px;
                 letter-spacing: -1.5px;
                 margin-bottom: 14px;
-            }
-
-            p {
-                font-size: 18px;
-                line-height: 28px;
             }
         }
     }
