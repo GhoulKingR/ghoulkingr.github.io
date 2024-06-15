@@ -1,23 +1,43 @@
 import styled from 'styled-components';
-import Project1 from '../assets/projects/cats-vs-dogs.png';
+import Project1 from '../assets/projects/connect-four.png';
+import Project2 from '../assets/projects/hangman-game.png';
 
 interface Project {
     imageSrc: string;
     title: string;
     tools: string[];
     projectLink: string;
-    description: string;
+    githubLink: string;
 }
 
 function Projects() {
     const projectDescriptions: Project[] = [
         {
+            githubLink: 'https://github.com/GhoulKingR/connect-four',
             imageSrc: Project1,
-            tools: ['PYTHON', 'TENSORFLOW', 'KERAS'],
-            projectLink: 'https://github.com/GhoulKingR/cat-dog-classifier/',
-            title: 'CAT-DOG IMAGE CLASSIFIER',
-            description:
-                'This project consists of a DNN that can distinguish between images of a cat and images of a Dog with 87% accuracy',
+            tools: [
+                'TYPESCRIPT',
+                'JEST',
+                'NEXT.JS',
+                'TAILWIND',
+                'STYLED COMPONENTS',
+            ],
+            projectLink: 'https://ghoulkingr.github.io/connect-four/',
+            title: 'CONNECT FOUR',
+        },
+        {
+            githubLink: 'https://github.com/GhoulKingR/hangman-game',
+            imageSrc: Project2,
+            tools: [
+                'TYPESCRIPT',
+                'BOOTSTRAP',
+                'NEXT.JS',
+                'TAILWIND',
+                'STYLED COMPONENTS',
+            ],
+            projectLink:
+                'https://github.com/GhoulKingR/hangman-game/settings/pages',
+            title: 'HANGMAN GAME',
         },
     ];
 
@@ -25,7 +45,7 @@ function Projects() {
         <Section className='md:mx-[30px]'>
             <div className='w-full flex justify-between mb-[40px] items-center'>
                 <h1 className='font-bold text-[40px] leading-[40px] tracking-[-1.14px] md:text-[72px] md:leading-[72px] md:tracking-[-2.05px]'>
-                    AI & ML Projects
+                    Web Projects
                 </h1>
                 <a
                     href='#contact-me'
@@ -49,8 +69,15 @@ function Projects() {
                                         <a
                                             href={project.projectLink}
                                             target='_blank'
-                                            className='my-underline hover:text-[#4ee1a0]'>
+                                            className='my-underline mb-[48px] hover:text-[#4ee1a0]'>
                                             VIEW PROJECT
+                                        </a>
+                                        <br />
+                                        <a
+                                            href={project.githubLink}
+                                            target='_blank'
+                                            className='my-underline hover:text-[#4ee1a0]'>
+                                            VIEW CODE
                                         </a>
                                     </div>
                                 </div>
@@ -58,9 +85,6 @@ function Projects() {
                             <div className='font-bold text-[24px] leading-[32px] mb-[7px]'>
                                 {project.title}
                             </div>
-
-                            <p className='mb-[20px]'>{project.description}</p>
-
                             <div className='mb-[20px]'>
                                 {project.tools.map((tool, i) => {
                                     return (
@@ -76,8 +100,14 @@ function Projects() {
                                 <a
                                     href={project.projectLink}
                                     target='_blank'
-                                    className='my-underline hover:text-[#4ee1a0]'>
+                                    className='mr-[30px] my-underline hover:text-[#4ee1a0]'>
                                     VIEW PROJECT
+                                </a>
+                                <a
+                                    href={project.githubLink}
+                                    target='_blank'
+                                    className='my-underline hover:text-[#4ee1a0]'>
+                                    VIEW CODE
                                 </a>
                             </div>
                         </div>

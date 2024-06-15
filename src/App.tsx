@@ -1,3 +1,4 @@
+import WebProjects from './components/WebProjects';
 import Projects from './components/Projects';
 import BackgroundPatterns from './components/BackgroundPatterns';
 import Greeting from './components/Greeting';
@@ -16,6 +17,7 @@ function App() {
             <Experience />
             <LineDisappears />
             <Projects />
+            <WebProjects />
             <ContactMe />
         </Main>
     );
