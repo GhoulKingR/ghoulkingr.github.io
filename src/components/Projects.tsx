@@ -1,20 +1,50 @@
 import styled from 'styled-components';
-import Project1 from '../assets/projects/cats-vs-dogs.png';
+import Project1 from '../assets/projects/connect-four.png';
+import Project2 from '../assets/projects/hangman-game.png';
+import Project3 from '../assets/projects/cats-vs-dogs.png';
 
 interface Project {
     imageSrc: string;
     title: string;
     tools: string[];
-    projectLink: string;
-    description: string;
+    githubLink: string;
+    projectLink?: string;
+    description?: string;
 }
 
 function Projects() {
     const projectDescriptions: Project[] = [
         {
+            githubLink: 'https://github.com/GhoulKingR/connect-four',
             imageSrc: Project1,
+            tools: [
+                'TYPESCRIPT',
+                'JEST',
+                'NEXT.JS',
+                'TAILWIND',
+                'STYLED COMPONENTS',
+            ],
+            projectLink: 'https://ghoulkingr.github.io/connect-four/',
+            title: 'CONNECT FOUR',
+        },
+        {
+            githubLink: 'https://github.com/GhoulKingR/hangman-game',
+            imageSrc: Project2,
+            tools: [
+                'TYPESCRIPT',
+                'BOOTSTRAP',
+                'NEXT.JS',
+                'TAILWIND',
+                'STYLED COMPONENTS',
+            ],
+            projectLink:
+                'https://github.com/GhoulKingR/hangman-game/settings/pages',
+            title: 'HANGMAN GAME',
+        },
+        {
+            imageSrc: Project3,
             tools: ['PYTHON', 'TENSORFLOW', 'KERAS'],
-            projectLink: 'https://github.com/GhoulKingR/cat-dog-classifier/',
+            githubLink: 'https://github.com/GhoulKingR/cat-dog-classifier/',
             title: 'CAT-DOG IMAGE CLASSIFIER',
             description:
                 'This project consists of a DNN that can distinguish between images of a cat and images of a Dog with 87% accuracy',
@@ -25,7 +55,7 @@ function Projects() {
         <Section className='md:mx-[30px]'>
             <div className='w-full flex justify-between mb-[40px] items-center'>
                 <h1 className='font-bold text-[40px] leading-[40px] tracking-[-1.14px] md:text-[72px] md:leading-[72px] md:tracking-[-2.05px]'>
-                    AI & ML Projects
+                    Projects
                 </h1>
                 <a
                     href='#contact-me'
@@ -46,11 +76,22 @@ function Projects() {
                                 />
                                 <div className='font-bold hidden xl:flex text-center absolute opacity-0 hover:opacity-100 cursor-pointer bg-black/50 top-0 left-0 w-full h-full justify-center items-center'>
                                     <div>
+                                        {project.projectLink !== undefined && (
+                                            <>
+                                                <a
+                                                    href={project.projectLink}
+                                                    target='_blank'
+                                                    className='my-underline mb-[48px] hover:text-[#4ee1a0]'>
+                                                    VIEW PROJECT
+                                                </a>
+                                                <br />
+                                            </>
+                                        )}
                                         <a
-                                            href={project.projectLink}
+                                            href={project.githubLink}
                                             target='_blank'
                                             className='my-underline hover:text-[#4ee1a0]'>
-                                            VIEW PROJECT
+                                            VIEW CODE
                                         </a>
                                     </div>
                                 </div>
@@ -59,7 +100,11 @@ function Projects() {
                                 {project.title}
                             </div>
 
-                            <p className='mb-[20px]'>{project.description}</p>
+                            {project.description !== undefined && (
+                                <p className='mb-[20px]'>
+                                    {project.description}
+                                </p>
+                            )}
 
                             <div className='mb-[20px]'>
                                 {project.tools.map((tool, i) => {
@@ -73,11 +118,19 @@ function Projects() {
                                 })}
                             </div>
                             <div className='flex text-[16px] leading-[26px] tracking-[2.29px] font-bold xl:hidden'>
+                                {project.projectLink !== undefined && (
+                                    <a
+                                        href={project.projectLink}
+                                        target='_blank'
+                                        className='mr-[30px] my-underline hover:text-[#4ee1a0]'>
+                                        VIEW PROJECT
+                                    </a>
+                                )}
                                 <a
-                                    href={project.projectLink}
+                                    href={project.githubLink}
                                     target='_blank'
                                     className='my-underline hover:text-[#4ee1a0]'>
-                                    VIEW PROJECT
+                                    VIEW CODE
                                 </a>
                             </div>
                         </div>

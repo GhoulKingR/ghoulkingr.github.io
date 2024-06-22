@@ -7,22 +7,19 @@ function Experience() {
             <Rings src={PatternRings} alt='rings pattern' />
             <Container>
                 <div>
-                    <h2>Artificial Intellligence</h2>
-                </div>
-                <div>
-                    <h2>Machine Learning</h2>
-                </div>
-                <div>
-                    <h2>Deep Learning</h2>
-                </div>
-                <div>
-                    <h2>Web Development</h2>
+                    <h2>Technical writing</h2>
                 </div>
                 <div>
                     <h2>API Development</h2>
                 </div>
                 <div>
-                    <h2>Content Creation</h2>
+                    <h2>Machine Learning & AI</h2>
+                </div>
+                <div>
+                    <h2>Web Development</h2>
+                </div>
+                <div>
+                    <h2>Web3</h2>
                 </div>
             </Container>
         </Section>

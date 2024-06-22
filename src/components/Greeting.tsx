@@ -15,11 +15,10 @@ function Greeting() {
                         <span className='text-[#4ee1a0]'>Chigozie Oduah</span>.
                     </GreetingText>
                     <Description>
-                        I'm an aspiring AI & ML Engineer with a strong
-                        background in technical writing and a passion for
-                        machine learning. I'm skilled in Python, data analysis,
-                        and statistical modeling, and can communicate complex
-                        technical concepts clearly and effectively.
+                        I'm a software engineer and technical writer passionate
+                        about building high-quality software that users love and
+                        communicating complex technical concepts clearly and
+                        effectively.
                     </Description>
                     <Contact>
                         <a href='#contact-me'>CONTACT ME</a>
